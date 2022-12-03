@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <title>Snacks</title>
-</head>
+    {% load static %}
 
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <title>Document</title>
+</head>
 <body>
 
-    <head>
-        {% block navigation %}
-        {% endblock navigation%}
-    </head>
+    <nav>
+        <section>
+            <h2>Django</h2>
+        </section>
+        <section>
+            
+            <a href="{%url 'snacks_list'%}">Snacks List</a>
+           
+            
+        </section>
+        
 
-    <main>
+        
+    </nav>
+    {% block content%}
 
-        {% block content %}
-        {% endblock content%}
-
-    </main>
-
-
+    {% endblock content%}
 
 
 </body>
-
 </html>
